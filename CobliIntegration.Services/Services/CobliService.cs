@@ -45,7 +45,7 @@ namespace CobliIntegration.Services.Services
                 Parameter.CreateParameter("timezone", "America/Sao_Paulo", ParameterType.QueryString),
                 Parameter.CreateParameter("limit", filter.Limit, ParameterType.QueryString),
                 Parameter.CreateParameter("page", filter.PageNumber, ParameterType.QueryString),                
-                Parameter.CreateParameter("cobli-api-key", "Dy3J0K5.19d17d73-64b5-4ace-b2ca-5855e25bd485", ParameterType.HttpHeader),
+                Parameter.CreateParameter("cobli-api-key", cobliSecret, ParameterType.HttpHeader),
             };
 
             if (filter.DriverIds != null)
@@ -63,7 +63,7 @@ namespace CobliIntegration.Services.Services
             var parameters = new List<Parameter>
             {
                 Parameter.CreateParameter("timezone", "America/Sao_Paulo", ParameterType.QueryString),
-                Parameter.CreateParameter("cobli-api-key", "Dy3J0K5.19d17d73-64b5-4ace-b2ca-5855e25bd485", ParameterType.HttpHeader),
+                Parameter.CreateParameter("cobli-api-key", cobliSecret, ParameterType.HttpHeader),
             };
 
 
